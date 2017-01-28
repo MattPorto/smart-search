@@ -10,7 +10,7 @@ class SearchedTermsController < ApplicationController
     @searched_term = SearchedTerm.new
   end
   def create
-    @searched_term = SearchedTerm.find_by(term: params["search"])
+    @searched_term = SearchedTerm.find_by(term: params[:search])
     unless @searched_term
       @searched_term = SearchedTerm.new(term: params[:search])
       @searched_term.save
