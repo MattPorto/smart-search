@@ -1,3 +1,104 @@
-// Place all the styles related to the searched_terms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}
+
+.input-group .form-control {
+  width: 83%;
+}
+
+#search-button {
+  background-color: #8c8c8c;
+  margin-top: 1%;
+  margin-left: 3%;
+}
+
+.col-md-6 {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 15%;
+}
+
+h2 {
+  text-align: center;
+}
+
+#ui-id-1 {
+  width: 548px;
+}
+.terms-table {
+  margin-top: 2%;
+  margin-left: 15%;
+  margin-bottom: 25%;
+  width: 500px;
+  padding: 2%;
+}
+
+.content.searched_terms {
+  margin-top: 14%;
+  margin-left: 25%;
+  background-color: #e6e6e6;
+  width: 50%;
+}
+
+.actions.reload-button, .most-searched-btn {
+  width: 30%;
+  height: 30px;
+  margin-left: 32%;
+  padding-top: 1%;
+  text-align: center;
+  background-color: #8c8c8c;
+  border-radius: 4px;
+}
+
+.actions.reload-button:hover, .most-searched-btn:hover {
+  background-color: #666666;
+  border-color: #8c8c8c;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+a, a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.actions.back-link a {
+  color: black;
+}
+
+.actions.back-link a:hover {
+  color: white;
+}
+
+.most-searched-btn {
+  margin-top: 3%;
+  margin-left: 34%;
+}

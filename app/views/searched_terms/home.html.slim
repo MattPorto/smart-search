@@ -1,0 +1,14 @@
+.container
+  .row
+    .col-md-6
+      h2 Find Our Articles
+      #custom-search-input
+        = form_tag searched_terms_path, method: :post do
+          .input-group.col-md-12
+            = text_field_tag :search, params[:term], class: 'form-control input-lg', placeholder: "Search"
+            = submit_tag "Search", class: 'btn btn-info btn-md', id: 'search-button'
+
+      .large-3.columns
+        .actions.most-searched-btn
+          = link_to :controller => "searched_terms", :action => "most_searched" do
+              span   Most Searched

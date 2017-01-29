@@ -1,0 +1,27 @@
+.content.searched_terms
+  .header
+    .row
+      .large-12.columns
+        h3.text-center Frequently Searched Terms
+
+  .terms-table
+
+      table(width="100%")
+        thead
+          tr
+            th = "Term"
+            th = "Popularity"
+            th
+
+        tbody
+          - @searched_terms.each do |search|
+            tr
+              td = search.term if search.popularity >= 2
+              td(width="20%") = "#{search.popularity} searches" if search.popularity >= 2
+      .large-3.columns
+        .actions.reload-button
+          = link_to :Update
+          
+        .actions.back-link
+          = link_to :controller => "searched_terms", :action => "home" do
+                span   Back

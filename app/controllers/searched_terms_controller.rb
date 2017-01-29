@@ -20,4 +20,8 @@ class SearchedTermsController < ApplicationController
     redirect_to root_path
   end
 
+  def most_searched
+    @searched_terms = SearchedTerm.all.order(popularity: :desc)
+  end
+
 end
