@@ -46,9 +46,6 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda-matchers', '~> 3.1'
-  gem 'factory_girl_rails'
-  gem 'capybara'
-  gem 'capybara-webkit'
 end
 
 group :development do
@@ -60,5 +57,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+gem 'rails_12factor', group: :production
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+ruby "2.3.0"
