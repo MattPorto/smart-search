@@ -14,12 +14,13 @@
               span   Most Searched
     .row
       h6= "You have been searched for: #{@last_search}" if @last_search
+
 javascript:
   var send_form = function() {
     $('#search-button').click();
   }
-  
+  $( "#search" ).on( "autocompleteselect", function( event, ui ) {setTimeout(send_form, 100)} );
+
   $('#search').autocomplete({
-    source: "/searched_terms",
-    select: send_form
+    source: "/searched_terms"
   })
