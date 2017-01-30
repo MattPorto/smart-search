@@ -21,7 +21,7 @@ class SearchedTermsController < ApplicationController
   end
 
   def most_searched
-    @searched_terms = SearchedTerm.all.order(popularity: :desc)
+    @searched_terms = SearchedTerm.all.order(popularity: :desc).select {|n| n.popularity > 1}
   end
 
 end

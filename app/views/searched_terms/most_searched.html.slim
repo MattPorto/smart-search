@@ -16,12 +16,12 @@
         tbody
           - @searched_terms.each do |search|
             tr
-              td = search.term if search.popularity >= 2
-              td(width="20%") = "#{search.popularity} searches" if search.popularity >= 2
+              td = search.term
+              td(width="20%") = "#{search.popularity} searches"
       .large-3.columns
         .actions.reload-button
           = link_to :Update
-          
+
         .actions.back-link
           = link_to :controller => "searched_terms", :action => "home" do
                 span   Back
