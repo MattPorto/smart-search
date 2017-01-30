@@ -12,3 +12,14 @@
         .actions.most-searched-btn
           = link_to :controller => "searched_terms", :action => "most_searched" do
               span   Most Searched
+    .row
+      h6= "You have been searched for: #{@last_search}" if @last_search
+javascript:
+  var send_form = function() {
+    $('#search-button').click();
+  }
+  
+  $('#search').autocomplete({
+    source: "/searched_terms",
+    select: send_form
+  })
